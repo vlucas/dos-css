@@ -6,7 +6,8 @@ $font-stack: "Share Tech Mono", "Lucida Console", Monaco, monospace;
 /**
  * Base styles
  */
-body {
+html, body {
+  height: 100%;
   font-family: $font-stack;
   font-size: 1em;
   background-color: #444;
@@ -16,8 +17,9 @@ body {
  * Box
  */
 .box {
-  margin: 2em;
-  padding: 16px 6px;
+  box-sizing: border-box;
+  margin: 1.2em;
+  padding: 10px 6px;
   background-color: darkblue;
   color: white;
   box-shadow: 16px 16px 0px #222;
@@ -74,4 +76,6 @@ body {
 }
 
 
-@import '_forms.scss'
+@import '_typography.scss';
+@import '_grid.scss';
+@import '_forms.scss';

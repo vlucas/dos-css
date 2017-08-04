@@ -1,0 +1,14 @@
+.flex {
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+
+  .grow-2 {
+    flex-grow: 4;
+  }
+}
+
+.flex>* {
+	box-sizing: border-box;
+	flex: 1 1 auto;
+}

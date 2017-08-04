@@ -4,7 +4,8 @@
 /**
  * Base styles
  */
-body {
+html, body {
+  height: 100%;
   font-family: "Share Tech Mono", "Lucida Console", Monaco, monospace;
   font-size: 1em;
   background-color: #444; }
@@ -13,8 +14,9 @@ body {
  * Box
  */
 .box {
-  margin: 2em;
-  padding: 16px 6px;
+  box-sizing: border-box;
+  margin: 1.2em;
+  padding: 10px 6px;
   background-color: darkblue;
   color: white;
   box-shadow: 16px 16px 0px #222;
@@ -57,20 +59,95 @@ body {
 .box.text-dark h2:after {
   border-color: black; }
 
-input, textarea, select {
+body, html {
+  font-family: "Share Tech Mono", "Lucida Console", Monaco, monospace;
+  font-size: 1em; }
+
+a {
+  display: inline-block;
+  background-color: darkgray;
+  color: #000; }
+
+.flex {
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap; }
+  .flex .grow-2 {
+    flex-grow: 4; }
+
+.flex > * {
+  box-sizing: border-box;
+  flex: 1 1 auto; }
+
+input, textarea, select, option, button {
   font-family: "Share Tech Mono", "Lucida Console", Monaco, monospace;
   font-size: 1.1em;
   padding: 0.3em 0.6em;
+  height: 1.8em;
   background-color: lightgrey;
+  color: #000;
   border: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  box-shadow: 4px 4px 0px #000; }
+
+button,
+input[type="button"],
+input[type="submit"] {
+  min-width: 15%;
+  padding: 0.3em 1em; }
+  button:before,
+  input[type="button"]:before,
+  input[type="submit"]:before {
+    content: "< "; }
+  button:after,
+  input[type="button"]:after,
+  input[type="submit"]:after {
+    content: " >"; }
+  button.positive,
+  input[type="button"].positive,
+  input[type="submit"].positive {
+    background-color: limegreen; }
+  button.negative,
+  input[type="button"].negative,
+  input[type="submit"].negative {
+    background-color: darkred;
+    color: white; }
+  button.primary,
+  input[type="button"].primary,
+  input[type="submit"].primary {
+    background-color: white; }
+  button.turquoise,
+  input[type="button"].turquoise,
+  input[type="submit"].turquoise {
+    background-color: turquoise; }
 
 input {
   min-width: 35%; }
 
+select {
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none; }
+
+select {
+  background: lightgrey url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
+  background-position: calc(100% - 10px) 42%;
+  cursor: pointer;
+  min-width: 35%;
+  height: 1.8em;
+  box-sizing: border-box;
+  padding: .3em .45em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none; }
+
 textarea {
   width: 100%;
   min-height: 140px; }
+
+/* file input fields */
+label > input[type=file] {
+  overflow: hidden; }
 
 .form-control {
   margin: 0.5em 0; }

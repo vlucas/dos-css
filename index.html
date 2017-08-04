@@ -1,57 +1,92 @@
 <html>
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
-  <link href="dist/index.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet" type="text/css">
+	<link href="dist/index.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
-  <div class="box">
-    <h2>Box Title</h2>
-    <div class="box-body">
-      <p>Some stuff here</p>
-      <p>Some stuff here</p>
-      <p>Some stuff here</p>
+	<div class="flex">
+		<div class="box">
+			<h2>Box Title</h2>
+			<div class="box-body">
+				<p>Some stuff here</p>
+        <p>Something with a <a href="https://www.google.com">link to google.com</a> here</p>
+				<p>Some stuff here</p>
+        <p>And a <mark>mark<mark> in the text</p>
+        <p>Some stuff here</p>
+        <p>Some stuff here</p>
+			</div>
+		</div>
+
+		<div class="box turquoise text-dark">
+			<h2>Box Title</h2>
+			<div class="box-body">
+				<p>Some stuff here</p>
+				<p>Some stuff here</p>
+				<p>Some stuff here</p>
+			</div>
+		</div>
+	</div>
+
+  <div class="flex">
+    <div class="box">
+      <h2>Menu</h2>
+      <div class="box-body">
+        <p>Some stuff here</p>
+      </div>
+    </div>
+
+    <div class="box" style="width: 60%">
+      <h2>Main Content</h2>
+      <div class="box-body">
+        <p>Some stuff here</p>
+      </div>
     </div>
   </div>
 
-  <div class="box turquoise text-dark">
-    <h2>Box Title</h2>
-    <div class="box-body">
-      <p>Some stuff here</p>
-      <p>Some stuff here</p>
-      <p>Some stuff here</p>
-    </div>
-  </div>
-
-  <div class="box">
-    <h2>Form Elements</h2>
-    <div class="box-body">
-      <form>
-        <div class="form-control">
-          <label><input type="email" placeholder="Email"></label>
-        </div>
-        <div class="form-control">
-          <label><input type="password" placeholder="Password"></label>
-        </div>
-        <div class="form-control">
-          <label>
-            <select>
-              <option>Option 1</option>
-              <option>Option 2</option>
-              <option>Option 3</option>
-              <option>Option 4</option>
-              <option>Option 5</option>
-              <option>Option 6</option>
-            </select>
-          </label>
-        </div>
-        <div class="form-control">
-          <textarea placeholder="Textarea"></textarea>
-        </div>
-      </form>
-    </div>
-  </div>
+	<div class="box">
+		<h2>Form Elements</h2>
+		<div class="box-body">
+			<form>
+				<div class="form-control">
+					<label><input type="email" placeholder="Email"></label>
+				</div>
+				<div class="form-control">
+					<label><input type="password" placeholder="Password"></label>
+				</div>
+				<div class="form-control">
+					<label>
+						<select>
+							<option>Option 1</option>
+							<option>Option 2</option>
+							<option>Option 3</option>
+							<option>Option 4</option>
+							<option>Option 5</option>
+							<option>Option 6</option>
+						</select>
+					</label>
+				</div>
+				<div class="form-control">
+					<label><input type="file" placeholder="Select a File..."></label>
+				</div>
+				<div class="form-control">
+					<textarea placeholder="Textarea"></textarea>
+				</div>
+				<div class="form-control">
+					<label><button type="submit">Submit Button</button></label>
+					<label><input type="submit" value="Submit Input" /></label>
+					<label><input type="button" value="Input Button" /></label>
+				</div>
+				<div class="form-control">
+					<label><button type="submit" class="primary">Submit</button></label>
+					<label><button type="submit" class="positive">Submit</button></label>
+					<label><button type="reset" class="negative">Cancel</button></label>
+					<label><button class="turquoise">Other</button></label>
+				</div>
+			</form>
+		</div>
+	</div>
 
 </body>
 </html>

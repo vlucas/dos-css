@@ -1,19 +1,76 @@
-input, textarea, select {
+$color-bg: lightgrey;
+$input-height: 1.8em;
+
+input, textarea, select, option, button {
   font-family: $font-stack;
   font-size: 1.1em;
   padding: 0.3em 0.6em;
-  background-color: lightgrey;
+  height: $input-height;
+  background-color: $color-bg;
+  color: #000;
   border: 0;
   border-radius: 0;
+  box-shadow: 4px 4px 0px #000;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  min-width: 15%;
+  padding: 0.3em 1em;
+
+  &:before {
+    content: "< ";
+  }
+  &:after {
+    content: " >";
+  }
+
+  &.positive {
+    background-color: limegreen;
+  }
+  &.negative {
+    background-color: darkred;
+    color: white;
+  }
+  &.primary {
+    background-color: white;
+  }
+  &.turquoise {
+    background-color: turquoise;
+  }
 }
 
 input {
   min-width: 35%;
 }
 
+select {
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+select {
+  background: $color-bg url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyIiBoZWlnaHQ9IjMiPjxwYXRoIGQ9Im0gMCwxIDEsMiAxLC0yIHoiLz48L3N2Zz4=) no-repeat scroll 95% center/10px 15px;
+  background-position: calc(100% - 10px) 42%;
+  cursor: pointer;
+  min-width: 35%;
+  height: $input-height;
+  box-sizing: border-box;
+  padding: .3em .45em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none
+}
+
 textarea {
   width: 100%;
   min-height: 140px;
+}
+
+/* file input fields */
+label > input[type=file] {
+  overflow: hidden;
 }
 
 .form-control {
