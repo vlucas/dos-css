@@ -1,0 +1,77 @@
+/**
+ * Main variables
+ */
+$font-stack: "Share Tech Mono", "Lucida Console", Monaco, monospace;
+
+/**
+ * Base styles
+ */
+body {
+  font-family: $font-stack;
+  font-size: 1em;
+  background-color: #444;
+}
+
+/**
+ * Box
+ */
+.box {
+  margin: 2em;
+  padding: 16px 6px;
+  background-color: darkblue;
+  color: white;
+  box-shadow: 16px 16px 0px #222;
+
+  &.turquoise {
+    background-color: turquoise;
+  }
+  &.text-dark {
+    color: black;
+  }
+
+  /* box title */
+  h2 {
+    font-size: 1.1em;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    margin-bottom: -0.5em;
+    padding-bottom: 0;
+    &:before,
+    &:after {
+      border-top: 3px double white;
+      background-color: transparent;
+      content: "";
+      display: inline-block;
+      height: 3px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+    &:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+
+  /* box body/content */
+  .box-body {
+    padding: 1em 2em;
+    border: 3px double white;
+    border-top: 0;
+  }
+}
+
+/* when dark text is required */
+.text-dark .box-body,
+.box.text-dark h2:before,
+.box.text-dark h2:after {
+  border-color: black;
+}
+
+
+@import '_forms.scss'
