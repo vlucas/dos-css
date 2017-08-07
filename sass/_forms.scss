@@ -1,7 +1,8 @@
 $color-bg: lightgrey;
 $input-height: 1.8em;
 
-input, textarea, select, option, button {
+input, textarea, select, option, button, a.button {
+  display: inline-block;
   font-family: $font-stack;
   font-size: 1.1em;
   padding: 0.3em 0.6em;
@@ -14,8 +15,10 @@ input, textarea, select, option, button {
 }
 
 button,
+a.button,
 input[type="button"],
 input[type="submit"] {
+  height: auto;
   min-width: 15%;
   padding: 0.3em 1em;
 
@@ -24,6 +27,11 @@ input[type="submit"] {
   }
   &:after {
     content: " >";
+  }
+
+  &:active {
+    margin: 3px 0 0 3px;
+    box-shadow: 1px 1px 0px #000;
   }
 
   &.positive {

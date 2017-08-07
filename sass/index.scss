@@ -37,7 +37,7 @@ html, body {
     overflow: hidden;
     text-align: center;
     margin: 0;
-    margin-bottom: -0.5em;
+    margin-bottom: -0.7em;
     padding-bottom: 0;
     &:before,
     &:after {
@@ -64,6 +64,9 @@ html, body {
   .box-body {
     padding: 1em 2em;
     border: 3px double white;
+  }
+
+  h2 + .box-body {
     border-top: 0;
   }
 }
@@ -77,5 +80,7 @@ html, body {
 
 
 @import '_typography.scss';
+@import '_code.scss';
 @import '_grid.scss';
 @import '_forms.scss';
+@import '_progressbar.scss';

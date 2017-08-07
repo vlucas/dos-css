@@ -31,7 +31,7 @@ html, body {
     overflow: hidden;
     text-align: center;
     margin: 0;
-    margin-bottom: -0.5em;
+    margin-bottom: -0.7em;
     padding-bottom: 0; }
     .box h2:before, .box h2:after {
       border-top: 3px double white;
@@ -50,7 +50,8 @@ html, body {
       margin-right: -50%; }
   .box .box-body {
     padding: 1em 2em;
-    border: 3px double white;
+    border: 3px double white; }
+  .box h2 + .box-body {
     border-top: 0; }
 
 /* when dark text is required */
@@ -68,6 +69,20 @@ a {
   background-color: darkgray;
   color: #000; }
 
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+pre {
+  display: block;
+  font-family: "Share Tech Mono", "Lucida Console", Monaco, monospace;
+  font-size: 1em;
+  background-color: black;
+  color: lightgrey;
+  padding: 1em; }
+
 .flex {
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +94,8 @@ a {
   box-sizing: border-box;
   flex: 1 1 auto; }
 
-input, textarea, select, option, button {
+input, textarea, select, option, button, a.button {
+  display: inline-block;
   font-family: "Share Tech Mono", "Lucida Console", Monaco, monospace;
   font-size: 1.1em;
   padding: 0.3em 0.6em;
@@ -91,32 +107,46 @@ input, textarea, select, option, button {
   box-shadow: 4px 4px 0px #000; }
 
 button,
+a.button,
 input[type="button"],
 input[type="submit"] {
+  height: auto;
   min-width: 15%;
   padding: 0.3em 1em; }
   button:before,
+  a.button:before,
   input[type="button"]:before,
   input[type="submit"]:before {
     content: "< "; }
   button:after,
+  a.button:after,
   input[type="button"]:after,
   input[type="submit"]:after {
     content: " >"; }
+  button:active,
+  a.button:active,
+  input[type="button"]:active,
+  input[type="submit"]:active {
+    margin: 3px 0 0 3px;
+    box-shadow: 1px 1px 0px #000; }
   button.positive,
+  a.button.positive,
   input[type="button"].positive,
   input[type="submit"].positive {
     background-color: limegreen; }
   button.negative,
+  a.button.negative,
   input[type="button"].negative,
   input[type="submit"].negative {
     background-color: darkred;
     color: white; }
   button.primary,
+  a.button.primary,
   input[type="button"].primary,
   input[type="submit"].primary {
     background-color: white; }
   button.turquoise,
+  a.button.turquoise,
   input[type="button"].turquoise,
   input[type="submit"].turquoise {
     background-color: turquoise; }
@@ -151,3 +181,13 @@ label > input[type=file] {
 
 .form-control {
   margin: 0.5em 0; }
+
+.progress-bar {
+  border: 1px solid white;
+  display: block;
+  padding: 8px;
+  height: 30px; }
+  .progress-bar span {
+    display: block;
+    height: 100%;
+    background: yellow; }

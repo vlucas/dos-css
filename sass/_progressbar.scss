@@ -1,0 +1,12 @@
+.progress-bar {
+  border: 1px solid white;
+  display: block;
+  padding: 8px;
+  height: 30px;
+
+  span {
+    display: block;
+    height: 100%;
+    background: yellow;
+  }
+}
